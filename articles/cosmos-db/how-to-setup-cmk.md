@@ -378,7 +378,11 @@ Note that **this only applies to the main Azure Cosmos DB transactional storage*
  
 ## Key rotation
 
-Rotating the customer-managed key used by your Azure Cosmos account can be done in two ways.
+Rotating the customer-managed key used by your Azure Cosmos account can be done in three ways.
+
+- Use Azure Key Vault automatic key rotation (https://docs.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation)
+ 
+    When creating the Key in Key Vault and then using that item when you do the setup of the Key in Cosmos you can have automatic rotation setup for the instance.
 
 - Create a new version of the key currently used from Azure Key Vault:
 
